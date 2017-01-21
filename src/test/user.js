@@ -64,7 +64,7 @@ describe('User', function() {
 
   describe('DELETE /users/:id', function() {
     describe('Given unique id', function() {
-      it('should display current user', function* () {
+      it('remove user', function* () {
         yield request
           .delete('/users/' + userid)
           .send()
