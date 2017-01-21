@@ -36,7 +36,7 @@ describe('User', function() {
 
   describe('GET /users/id', function() {
     describe('Given unique id', function() {
-      it('should display current user', function* () {
+      it('should display specific user', function* () {
         yield request
           .get('/users/' + userid)
           .send()
@@ -62,9 +62,9 @@ describe('User', function() {
     });
   });
 
-  describe('DELETE /users/:id', function() {
+  describe('DELETE /users/id', function() {
     describe('Given unique id', function() {
-      it('remove user', function* () {
+      it('remove specific user', function* () {
         yield request
           .delete('/users/' + userid)
           .send()
